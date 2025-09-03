@@ -3,6 +3,7 @@
 *   [Bean 이란?](#Bean-이란)
 *   [인터페이스?](#인터페이스)
 *   [인터페이스?](#인터페이스)
+*   직접 의존(direct dependency) / 간접 의존(indirect dependency)
    
 
 ---
@@ -222,3 +223,4 @@ A) EmpService라는 인터페이스를 EmpServiceImpl에서 구현하고있기 �
 ---
 나중에 버젼 맞출때 필요할듯!
 https://mybatis.org/spring/
+
