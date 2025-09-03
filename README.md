@@ -224,6 +224,14 @@ A) EmpService라는 인터페이스를 EmpServiceImpl에서 구현하고있기 �
 나중에 버젼 맞출때 필요할듯!
 https://mybatis.org/spring/
 
+---
+## 직접 의존/간접 의존
+
+```java
+EmpService service = context.getBean(EmpService.class);
+```
+-> 코드에서 new 하거나 context.getBean() 해서 직접 가져와서 쓰는 것들
+
 
 
 
