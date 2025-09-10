@@ -23,7 +23,7 @@ public class AddrBookController {
 	// Autowired는 이러한 타입의 빈이 있으면 연결시켜주는것
 	
 	@Autowired
-	AddrBookDAO dao;
+//	AddrBookDAO dao;
 	
 	@RequestMapping("/insert.do")
 	public String insert(AddrBookVO vo) throws Exception {
@@ -42,6 +42,9 @@ public class AddrBookController {
 	@RequestMapping("/addrbook_form.do")
 	public String form() {
 		return "addrbook_form"; // jsp file name을 문자열로 출력
+	}
+	public void Jb() {
+		return;
 	}
 	
 	
