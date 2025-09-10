@@ -81,13 +81,13 @@ public class AddrBookController {
 //	 * result.setViewName("addrbook_list"); // 문자열 리턴 return result; }
 //	 */
 //	
-	// 수정하는 메서드 진짜
-	@RequestMapping("/addrbook_modify.do")
-	public String modify(AddrBookVO vo) throws Exception {
-		System.out.println(vo);
-		dao.updateDB(vo);
-		return "redirect:addrbook_list.do"; // 다시 목록으로 돌아가야함
-	}
+//	// 수정하는 메서드 진짜
+//	@RequestMapping("/addrbook_modify.do")
+//	public String modify(AddrBookVO vo) throws Exception {
+//		System.out.println(vo);
+//		dao.updateDB(vo);
+//		return "redirect:addrbook_list.do"; // 다시 목록으로 돌아가야함
+//	}
 	
 //	// 일단 해당아이디의 정보가 폼에 떴으면 좋겠음 // 모델뷰로 하지말고 원래 하던, request 활용해서 할까
 	@RequestMapping("/addrbook_edit_form.do")
