@@ -22,40 +22,45 @@
 <H2>주소록:수정화면 </H2>
 <HR>
 [<a href="addrbook_list.do">주소록 목록으로</a>] <p>
-<form name=form1 method=post action=addrbook_modify.do>
-<input type=hidden name="abId" value="${data.abId}">
-<input type=hidden name="action" value="update">
+<form th:action="@{/addrbook_modify.do}" th:object="${data}" method="post">
+  <input type="hidden" th:field="*{abId}">
+  <input type="hidden" name="action" value="update">
 
-<table border="1">
-  <tr>
-    <th>이 름</th>
-    <td><input type="text" name="abName" th:value="${data.abName}"></td>
-  </tr>
-  <tr>
-    <th>email</th>
-    <td><input type="text" name="abEmail" th:value="${data.abEmail}"></td>
-  </tr>
+  <table border="1">
     <tr>
-    <th>전화번호</th>
-    <td><input type="text" name="abTel" th:value="${data.abTel}"></td>
-  </tr>
-      <tr>
-    <th>생 일</th>
-    <td><input type="date" name="abBirth" th:value="${data.abBirth}"></td>
-  </tr>
-  <tr>
-    <th>회 사</th>
-    <td><input type="text" name="abComdept" th:value="${data.abComdept}"></td>
-  </tr>
-  <tr>
-    <th>메 모</th>
-    <td><input type="text" name="abMemo" th:value="${data.abMemo}"></td>
-  </tr>
-  <tr>
-    <td colspan=2 align=center><input th:type=submit value="저장"><input type=reset value="취소"><input type="button" value="삭제" onClick="delcheck()"></td>
-</tr>
-</table>
+      <th>이 름</th>
+      <td><input type="text" th:field="*{abName}"></td>
+    </tr>
+    <tr>
+      <th>email</th>
+      <td><input type="text" th:field="*{abEmail}"></td>
+    </tr>
+    <tr>
+      <th>전화번호</th>
+      <td><input type="text" th:field="*{abTel}"></td>
+    </tr>
+    <tr>
+      <th>생 일</th>
+      <td><input type="date" th:field="*{abBirth}"></td>
+    </tr>
+    <tr>
+      <th>회 사</th>
+      <td><input type="text" th:field="*{abComdept}"></td>
+    </tr>
+    <tr>
+      <th>메 모</th>
+      <td><input type="text" th:field="*{abMemo}"></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <input type="submit" value="저장">
+        <input type="reset" value="취소">
+        <input type="button" value="삭제" onClick="delcheck()">
+      </td>
+    </tr>
+  </table>
 </form>
+
 
 </div>
 </body>

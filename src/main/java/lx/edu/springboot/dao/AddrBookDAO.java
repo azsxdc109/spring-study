@@ -41,7 +41,8 @@ public class AddrBookDAO {
 	
 	// 수정 sql을 받는 메서드 -> 근데 영향을 받은 행을 리턴해야하나봄 얘도 insert처럼
 	public int updateDB(AddrBookVO vo) throws Exception {
-		return session.update("modifyDB", vo);
+		//return session.update("modifyDB", vo);
+		return session.update("updateDB",vo);
 	}
 	
 	public AddrBookVO getOne(int abId) throws Exception {
