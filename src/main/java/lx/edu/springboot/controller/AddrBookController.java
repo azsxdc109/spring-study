@@ -19,7 +19,7 @@ import lx.edu.springboot.vo.AddrBookVO;
 public class AddrBookController {
 	
 	@Autowired
-	ApplicationContext context; // 이게 잇으면 생성된 빈즈들의 머시기..
+//	ApplicationContext context; // 이게 잇으면 생성된 빈즈들의 머시기..
 	// Autowired는 이러한 타입의 빈이 있으면 연결시켜주는것
 	
 	@Autowired
