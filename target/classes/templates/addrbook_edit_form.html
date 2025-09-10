@@ -17,15 +17,11 @@
 <title>주소록:수정화면</title>
 </head>
 
- <jsp:useBean id="data" scope="request" class="lx.edu.springmvc.vo.AddrBookVO" /> 
-
 <body>
 <div align="center">
 <H2>주소록:수정화면 </H2>
 <HR>
 [<a href="addrbook_list.do">주소록 목록으로</a>] <p>
-ab_id: ${requestScope.data.abId} <br/>
-ab_id: ${data.abId} <br/>
 <form name=form1 method=post action=addrbook_modify.do>
 <input type=hidden name="abId" value="${data.abId}">
 <input type=hidden name="action" value="update">
@@ -33,30 +29,30 @@ ab_id: ${data.abId} <br/>
 <table border="1">
   <tr>
     <th>이 름</th>
-    <td><input type="text" name="abName" value="${data.abName}"></td>
+    <td><input type="text" name="abName" th:value="${data.abName}"></td>
   </tr>
   <tr>
     <th>email</th>
-    <td><input type="text" name="abEmail" value="${data.abEmail}"></td>
+    <td><input type="text" name="abEmail" th:value="${data.abEmail}"></td>
   </tr>
     <tr>
     <th>전화번호</th>
-    <td><input type="text" name="abTel" value="${data.abTel}"></td>
+    <td><input type="text" name="abTel" th:value="${data.abTel}"></td>
   </tr>
       <tr>
     <th>생 일</th>
-    <td><input type="date" name="abBirth" value="${data.abBirth}"></td>
+    <td><input type="date" name="abBirth" th:value="${data.abBirth}"></td>
   </tr>
   <tr>
     <th>회 사</th>
-    <td><input type="text" name="abComdept" value="${data.abComdept}"></td>
+    <td><input type="text" name="abComdept" th:value="${data.abComdept}"></td>
   </tr>
   <tr>
     <th>메 모</th>
-    <td><input type="text" name="abMemo" value="${data.abMemo}"></td>
+    <td><input type="text" name="abMemo" th:value="${data.abMemo}"></td>
   </tr>
   <tr>
-    <td colspan=2 align=center><input type=submit value="저장"><input type=reset value="취소"><input type="button" value="삭제" onClick="delcheck()"></td>
+    <td colspan=2 align=center><input th:type=submit value="저장"><input type=reset value="취소"><input type="button" value="삭제" onClick="delcheck()"></td>
 </tr>
 </table>
 </form>

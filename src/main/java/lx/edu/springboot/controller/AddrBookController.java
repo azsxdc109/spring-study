@@ -89,7 +89,7 @@ public class AddrBookController {
 		return "redirect:addrbook_list.do"; // 다시 목록으로 돌아가야함
 	}
 	
-	// 일단 해당아이디의 정보가 폼에 떴으면 좋겠음 // 모델뷰로 하지말고 원래 하던, request 활용해서 할까
+//	// 일단 해당아이디의 정보가 폼에 떴으면 좋겠음 // 모델뷰로 하지말고 원래 하던, request 활용해서 할까
 	@RequestMapping("/addrbook_edit_form.do")
 	public ModelAndView modifyForm(@RequestParam("abId") int abId) throws Exception {
 		ModelAndView result = new ModelAndView();
@@ -100,4 +100,6 @@ public class AddrBookController {
 		result.setViewName("addrbook_edit_form");
 		return result; 
 	}
+	
 }
+
